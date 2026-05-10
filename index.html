@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProMap Analytics - Football Heatmap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Pitch Perfect Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              apple: {
+                gray: '#F5F5F7',
+                blue: '#007AFF',
+                blur: 'rgba(255, 255, 255, 0.72)',
+              }
+            },
+            boxShadow: {
+              'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+              'glass-hover': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
     <style>
       body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0f172a;
-        color: #f8fafc;
+        background-color: #F5F5F7;
+        -webkit-font-smoothing: antialiased;
       }
-      /* Custom scrollbar for control panel */
+      /* Hide scrollbar for clean UI */
       ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #1e293b;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #475569;
-        border-radius: 3px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #64748b;
+        width: 0px;
+        background: transparent;
       }
     </style>
 
@@ -34,14 +44,15 @@
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@heroicons/react/": "https://esm.sh/@heroicons/react@^2.2.0/"
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1"
   }
 }
 </script>
-  <script type="module" crossorigin src="/sofascore-heatmap/assets/index-CE6aH-Ws.js"></script>
+  <script type="module" crossorigin src="/pitchperfect/assets/index-BUP8MuFg.js"></script>
 </head>
   <body>
     <div id="root"></div>
